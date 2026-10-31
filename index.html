@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title></title>
+
+ <link rel="stylesheet" href="styles.css">
+ <script src="app.js" defer></script>
+</head>
+
+<body>
+
+  <!-- CABECERA -->
+  <header class="cabecera">
+    <div class="contenedor contenido-cabecera">
+
+      <div class="marca">
+        <span>✂ Mi peluquería</span>
+        <span class="icono-marca">💇‍♀️</span>
+      </div>
+
+      <img
+        class="imagen-peluqueria"
+        src="images/imagenPeluqueria.png"
+        alt="Ilustración de una peluquería"
+      >
+
+    </div>
+  </header>
+
+
+  <main class="contenedor">
+
+    <!-- INTRODUCCIÓN -->
+    <div class="introduccion">
+      <h1>Gestor de citas</h1>
+      <p>
+        Registra los servicios de tus clientes
+        y administra las citas de tu peluquería.
+      </p>
+    </div>
+
+    <h2>Los consejos de tu peluquero</h2>
+    <button
+      id="servicioSemana"
+      class="boton-consejo"
+      onclick="mostrarConsejo('servicio')"
+    >
+      Servicio de la semana →
+    </button>
+    <button
+      id="consejoPeluqueria"
+      class="boton-consejo"
+      onclick="mostrarConsejo('consejo')"
+    >
+      Consejo de peluquería →
+    </button>
+    <p id="mensajeReto4" class="mensaje"></p>
+
+
+    <div class="distribucion">
+
+      <!-- ========================= -->
+      <!-- FORMULARIO DE NUEVA CITA -->
+      <!-- ========================= -->
+
+      <section class="panel">
+
+        <h2>1. Nueva cita</h2>
+        <p>Introduce los datos del cliente.</p>
+
+        <form id="formularioCita">
+
+          <!-- NOMBRE -->
+          <div class="campo">
+            <label for="nombreCliente">
+              Nombre del cliente
+            </label>
+
+            <input
+              id="nombreCliente"
+              type="text"
+              placeholder="Ej.: Marta Ruiz"
+              required
+            >
+          </div>
+
+          <!-- SERVICIO -->
+          <div class="campo">
+            <label for="servicio">
+              Servicio
+            </label>
+
+            <select id="servicio" required>
+              <option value="">
+                Selecciona un servicio
+              </option>
+              <option value="Corte">Corte</option>
+              <option value="Peinado">Peinado</option>
+              <option value="Tinte">Tinte</option>
+              <option value="Barba">Barba</option>
+              <option value="Corte y peinado">
+                Corte y peinado
+              </option>
+            </select>
+          </div>
+
+          <!-- PRECIO -->
+          <div class="campo">
+            <label for="precio">
+              Precio (€)
+            </label>
+
+            <input
+              id="precio"
+              type="number"
+              step="0.01"
+              placeholder="Ej.: 25"
+              required
+              min="0"
+            >
+          </div>
+
+          <!-- BOTÓN DE ENVÍO -->
+          <button
+            type="submit"
+            class="boton-principal"
+            onclick="agregarCita()"
+          >
+            Añadir cita →
+          </button>
+
+          <p id="mensaje" class="mensaje"></p>
+
+        </form>
+
+      </section>
+
+
+      <!-- ========================= -->
+      <!-- LISTADO DE CITAS -->
+      <!-- ========================= -->
+
+      <section class="panel">
+
+        <h2>2. Citas registradas</h2>
+        <p>Listado de servicios realizados.</p>
+
+        <p class="contador">
+          Total de citas:
+          <span id="totalCitas">0</span>
+        </p>
+
+        <!-- JavaScript creará aquí las tarjetas -->
+        <div
+          id="listaCitas"
+          class="lista-citas"
+        ></div>
+
+
+        <!-- IMPORTE TOTAL -->
+        <div class="resumen-total">
+
+          <h3>Importe total de las citas</h3>
+
+          <p id="importeTotal">0 €</p>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- ESPACIO PARA EL RETO 4 -->
+    <!-- ========================= -->
+
+    <!--
+      Aquí crearás una nueva sección
+      con dos botones:
+
+      - Servicio de la semana
+      - Consejo de peluquería
+
+      Añade también un párrafo donde
+      mostrarás los mensajes.
+    -->
+
+
+    <!-- IMAGEN DE DESPEDIDA -->
+    <img
+      class="imagen-gracias"
+      src="images/gracias.png"
+      alt="Mensaje de agradecimiento por el curso de desarrollo web"
+    >
+
+  </main>
+
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie-pagina">
+    Práctica final · HTML + CSS + JavaScript
+  </footer>
+
+</body>
+</html>

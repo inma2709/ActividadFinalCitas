@@ -1,0 +1,240 @@
+
+/* =====================================
+   ESTILOS GENERALES
+===================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f6f4f2;
+  color: #333;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #914f57;
+}
+
+
+/* =====================================
+   CABECERA
+===================================== */
+
+.cabecera {
+  background-color: white;
+}
+
+.contenido-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.marca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #c00d8a;
+  text-align: center;
+}
+
+.icono-marca {
+  font-size: 60px;
+}
+
+.imagen-peluqueria {
+  width: 65%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+/* =====================================
+   INTRODUCCIÓN
+===================================== */
+
+.introduccion {
+  margin: 20px 0 30px;
+}
+
+
+/* =====================================
+   DISTRIBUCIÓN PRINCIPAL
+===================================== */
+
+.distribucion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+
+/* =====================================
+   CAMPOS DEL FORMULARIO
+===================================== */
+
+.campo {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+/* =====================================
+   BOTÓN
+===================================== */
+
+.boton-principal {
+  width: 100%;
+  padding: 12px;
+  background-color: #c00d8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton-principal:hover {
+  background-color: #914f57;
+}
+
+.mensaje {
+  color: #914f57;
+  font-weight: bold;
+}
+
+.boton-consejo {
+  padding: 12px;
+  background-color: #c00d8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.boton-consejo:hover {
+  background-color: #914f57;
+}
+
+/* =====================================
+   CITAS REGISTRADAS
+===================================== */
+
+.lista-citas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cita {
+  background-color: #f6f4f2;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.cita h3 {
+  margin: 0 0 5px;
+}
+
+.cita p {
+  margin: 5px 0;
+}
+
+.precio {
+  color: #c00d8a;
+  font-weight: bold;
+}
+
+.contador {
+  font-weight: bold;
+}
+
+
+/* =====================================
+   IMPORTE TOTAL
+===================================== */
+
+.resumen-total {
+  background-color: #f4e4e5;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#importeTotal {
+  font-size: 25px;
+  font-weight: bold;
+  color: #c00d8a;
+}
+
+
+/* =====================================
+   IMAGEN FINAL Y PIE
+===================================== */
+
+.imagen-gracias {
+  display: block;
+  width: 100%;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+.pie-pagina {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  color: #666;
+}
+
+
+/* =====================================
+   ADAPTACIÓN A MÓVILES
+===================================== */
+
+@media (max-width: 750px) {
+
+  .distribucion {
+    grid-template-columns: 1fr;
+  }
+
+  .contenido-cabecera {
+    flex-direction: column;
+  }
+
+  .imagen-peluqueria {
+    width: 100%;
+  }
+
+}
